@@ -1,0 +1,420 @@
+/* CSS Scanner Overlay Styles - Performance Optimized */
+.css-scanner-highlight {
+  outline: 2px dashed #007bff !important;
+  outline-offset: 2px !important;
+  position: relative !important;
+  cursor: crosshair !important;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1) !important;
+  /* GPU 가속으로 성능 최적화 */
+  transform: translateZ(0) !important;
+  will-change: outline, box-shadow !important;
+}
+
+/* Popup Styles - Optimized for Performance */
+.css-scanner-popup {
+  position: fixed !important;
+  width: 380px !important;
+  max-height: 500px !important;
+  background: white !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+  z-index: 999999 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  transform: scale(0.9) translateY(10px) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  pointer-events: auto !important;
+  /* GPU 가속 및 성능 최적화 */
+  transform-origin: center !important;
+  will-change: opacity, transform !important;
+  backface-visibility: hidden !important;
+  -webkit-font-smoothing: antialiased !important;
+  contain: layout style paint !important;
+}
+
+.css-scanner-popup.show {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+}
+
+.css-scanner-header {
+  background: linear-gradient(135deg, #007bff, #0056b3) !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-radius: 12px 12px 0 0 !important;
+  transition: background 0.3s ease !important;
+  /* 성능 최적화 */
+  contain: layout style !important;
+}
+
+.css-scanner-header.pinned {
+  background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.3) !important;
+}
+
+.css-scanner-title {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.css-scanner-icon {
+  font-size: 16px !important;
+}
+
+.css-scanner-close {
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  padding: 4px 6px !important;
+  border-radius: 4px !important;
+  transition: background-color 0.2s ease !important;
+  line-height: 1 !important;
+  /* 터치 친화적 */
+  min-width: 32px !important;
+  min-height: 32px !important;
+}
+
+.css-scanner-close:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.css-scanner-content {
+  max-height: 440px !important;
+  overflow-y: auto !important;
+  padding: 0 !important;
+  /* 스크롤 성능 최적화 */
+  -webkit-overflow-scrolling: touch !important;
+  contain: layout style !important;
+}
+
+/* Element Header */
+.css-scanner-element-header {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #e9ecef !important;
+  background: #f8f9fa !important;
+  contain: layout style !important;
+}
+
+.css-scanner-element-info {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.css-scanner-element-tag {
+  background: #007bff !important;
+  color: white !important;
+  padding: 3px 6px !important;
+  border-radius: 3px !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+}
+
+.css-scanner-element-id {
+  background: #28a745 !important;
+  color: white !important;
+  padding: 3px 6px !important;
+  border-radius: 3px !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+.css-scanner-element-class {
+  background: #ffc107 !important;
+  color: #212529 !important;
+  padding: 3px 6px !important;
+  border-radius: 3px !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-size: 11px !important;
+}
+
+.css-scanner-pin-indicator {
+  font-size: 11px !important;
+  color: #28a745 !important;
+  font-weight: 600 !important;
+  background: rgba(40, 167, 69, 0.1) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(40, 167, 69, 0.3) !important;
+}
+
+.css-scanner-hover-indicator {
+  font-size: 11px !important;
+  color: #6c757d !important;
+  font-weight: 500 !important;
+  background: rgba(108, 117, 125, 0.1) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(108, 117, 125, 0.2) !important;
+}
+
+/* Selector Section */
+.css-scanner-selector-section {
+  padding: 12px 16px !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e9ecef !important;
+  contain: layout style !important;
+}
+
+.css-scanner-section-title {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  margin-bottom: 6px !important;
+  font-size: 12px !important;
+}
+
+.css-scanner-selector-value {
+  background: #f8f9fa !important;
+  padding: 6px 8px !important;
+  border-radius: 4px !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-size: 11px !important;
+  color: #e83e8c !important;
+  word-break: break-all !important;
+  margin-bottom: 6px !important;
+  border: 1px solid #e9ecef !important;
+  max-height: 60px !important;
+  overflow-y: auto !important;
+  /* 성능 최적화 */
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Copy Actions */
+.css-scanner-copy-actions {
+  padding: 12px 16px !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e9ecef !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  contain: layout style !important;
+}
+
+.css-scanner-copy-btn {
+  background: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  color: #495057 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-weight: 500 !important;
+  /* 터치 친화적 */
+  min-height: 32px !important;
+  /* 성능 최적화 */
+  contain: layout style !important;
+}
+
+.css-scanner-copy-btn:hover:not(:disabled) {
+  background: #e9ecef !important;
+  border-color: #adb5bd !important;
+  transform: translateY(-1px) !important;
+}
+
+.css-scanner-copy-btn.primary {
+  background: #007bff !important;
+  border-color: #007bff !important;
+  color: white !important;
+}
+
+.css-scanner-copy-btn.primary:hover:not(:disabled) {
+  background: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+.css-scanner-copy-btn:disabled {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+  transform: none !important;
+}
+
+.css-scanner-copy-btn:disabled:hover {
+  background: #f8f9fa !important;
+  border-color: #dee2e6 !important;
+}
+
+.css-scanner-copy-btn.primary:disabled:hover {
+  background: #007bff !important;
+  border-color: #007bff !important;
+}
+
+/* Categories */
+.css-scanner-category {
+  border-bottom: 1px solid #f1f3f4 !important;
+  contain: layout style !important;
+}
+
+.css-scanner-category:last-child {
+  border-bottom: none !important;
+}
+
+.css-scanner-category-header {
+  padding: 10px 16px !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: background-color 0.2s ease !important;
+  /* 터치 친화적 */
+  min-height: 44px !important;
+  /* 성능 최적화 */
+  contain: layout style !important;
+}
+
+.css-scanner-category-header:hover {
+  background: #f8f9fa !important;
+}
+
+.css-scanner-category-icon {
+  font-size: 14px !important;
+}
+
+.css-scanner-category-name {
+  flex: 1 !important;
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+  font-size: 12px !important;
+}
+
+.css-scanner-category-count {
+  font-size: 10px !important;
+  color: #6c757d !important;
+  background: #e9ecef !important;
+  padding: 1px 4px !important;
+  border-radius: 8px !important;
+}
+
+.css-scanner-category-toggle {
+  color: #6c757d !important;
+  font-size: 10px !important;
+  transition: transform 0.2s ease !important;
+}
+
+.css-scanner-category-content {
+  background: #fafbfc !important;
+  contain: layout style !important;
+}
+
+/* Properties */
+.css-scanner-property {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 6px 16px 6px 36px !important;
+  border-bottom: 1px solid #f8f9fa !important;
+  transition: background-color 0.2s ease !important;
+  /* 성능 최적화 */
+  contain: layout style !important;
+}
+
+.css-scanner-property:hover {
+  background: #f1f3f4 !important;
+}
+
+.css-scanner-property:last-child {
+  border-bottom: none !important;
+}
+
+.css-scanner-prop-name {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  min-width: 80px !important;
+  max-width: 120px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.css-scanner-prop-value {
+  color: #2c3e50 !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-size: 10px !important;
+  text-align: right !important;
+  flex: 1 !important;
+  margin-left: 8px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* Optimized Scrollbar */
+.css-scanner-content::-webkit-scrollbar,
+.css-scanner-selector-value::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.css-scanner-content::-webkit-scrollbar-track,
+.css-scanner-selector-value::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 2px !important;
+}
+
+.css-scanner-content::-webkit-scrollbar-thumb,
+.css-scanner-selector-value::-webkit-scrollbar-thumb {
+  background: #c1c1c1 !important;
+  border-radius: 2px !important;
+}
+
+.css-scanner-content::-webkit-scrollbar-thumb:hover,
+.css-scanner-selector-value::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8 !important;
+}
+
+/* Performance optimizations for animations */
+@media (prefers-reduced-motion: reduce) {
+  .css-scanner-popup,
+  .css-scanner-category-header,
+  .css-scanner-property,
+  .css-scanner-copy-btn,
+  .css-scanner-category-toggle {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Mobile and responsive optimizations */
+@media (max-width: 500px) {
+  .css-scanner-popup {
+    width: calc(100vw - 40px) !important;
+    max-width: 350px !important;
+  }
+  
+  .css-scanner-copy-btn {
+    min-height: 36px !important;
+    font-size: 12px !important;
+  }
+  
+  .css-scanner-category-header {
+    min-height: 48px !important;
+  }
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .css-scanner-popup {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  }
+}
+
+/* GPU acceleration for better performance */
+.css-scanner-popup,
+.css-scanner-highlight,
+.css-scanner-copy-btn:hover {
+  transform: translateZ(0) !important;
+}

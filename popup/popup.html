@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔍 CSS Scanner</h1>
+      <div class="version">1.0</div>
+    </div>
+    
+    <div class="controls">
+      <button id="toggleScan" class="scan-btn">
+        <span class="btn-icon">🎯</span>
+        <span class="btn-text">Start Scan Mode</span>
+      </button>
+    </div>
+    
+    <div class="status" id="status">
+      Loading extension...
+    </div>
+    
+    <div class="features">
+      <h3>✨ Key Features</h3>
+      <ul>
+        <li><strong>Mouse Popup:</strong> CSS info displayed at mouse position</li>
+        <li><strong>Click to Pin:</strong> Click element to pin CSS window</li>
+        <li><strong>Categorized:</strong> Styles organized by property type</li>
+        <li><strong>Copy Feature:</strong> Copy CSS and selectors to clipboard</li>
+      </ul>
+    </div>
+    
+    <div class="info">
+      <p>💡 How to Use:</p>
+      <ul>
+        <li>Activate scan mode</li>
+        <li><strong>Hover:</strong> Preview CSS on mouse over</li>
+        <li><strong>Click:</strong> Pin CSS window 🔒</li>
+        <li><strong>Unpin:</strong> Click elsewhere or press ESC</li>
+        <li><strong>Copy:</strong> Click buttons to copy CSS/selectors</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

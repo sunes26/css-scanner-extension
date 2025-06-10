@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  min-height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.version {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #007bff;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.scan-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.scan-btn:hover:not(:disabled) {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.scan-btn.active {
+  background: #28a745;
+}
+
+.scan-btn.active:hover {
+  background: #1e7e34;
+}
+
+.scan-btn.loading {
+  background: #6c757d !important;
+  cursor: not-allowed !important;
+}
+
+.scan-btn.error {
+  background: #dc3545 !important;
+}
+
+.scan-btn.disabled {
+  background: #6c757d !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.scan-btn:disabled {
+  transform: none !important;
+}
+
+.status {
+  padding: 12px;
+  background: #e9ecef;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #495057;
+  margin-bottom: 20px;
+  text-align: center;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status.active {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.features {
+  margin-bottom: 20px;
+  padding: 12px;
+  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+  border-radius: 8px;
+  border: 1px solid #e1bee7;
+}
+
+.features h3 {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.features ul {
+  padding-left: 16px;
+  font-size: 11px;
+  color: #495057;
+}
+
+.features li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.features strong {
+  color: #007bff;
+}
+
+.info {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.info p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.info ul {
+  padding-left: 16px;
+}
+
+.info li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.info strong {
+  color: #007bff;
+  font-weight: 600;
+}
