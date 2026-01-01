@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+coverage/
+*.min.js
+*.min.css
+*.bundle.js
+package-lock.json
+yarn.lock
+CHANGELOG.md
+LICENSE
